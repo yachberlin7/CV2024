@@ -1,0 +1,448 @@
+/*PRESENTATION*/
+/*1 STYLE GENERAL*/
+/*2 Keyframes*/
+/*3 Colonne gauche*/
+/*4 Colonne droite*/
+/*5 Responsive Media queries*/
+
+/* 1 STYLE GENERAL*/
+
+@font-face 
+{ /* Définition d'une nouvelle police nommée CAC Champagne */
+  font-family: 'cac_champagneregular';
+  src: url('fonts/Rubik-Regular.ttf');
+}
+body
+{
+  font-family: 'cac_champagneregular', Arial, serif;
+  color:#aec8cf;
+  font-size: medium;
+  font-weight: 200;
+}
+
+h1
+{
+  color:#220f82;
+  padding-left: 10px;
+  font-size: 45px;
+}
+h2
+{
+  color:#c177de;
+  font-size: 38px;
+}
+em
+{
+  font-size: 35px;
+  color:#af7913;
+}
+span
+{
+  text-decoration: underline;
+  text-decoration-color:#af7913;
+}
+.container
+{
+  margin: 0 15px 0 15px;
+}
+.fas
+{
+line-height: inherit;
+}
+/*2 keyframes*/
+
+@keyframes slideHigher  {
+  0% { transform: scale(0.5); }
+  75% { transform: scale(1.20); }
+  100% {transform: scale(1);}
+}
+@keyframes wheelHueColor {
+  from, to { color: black; }
+    0%      { color: hsl(180, 75%, 35%); }
+  25%     { color: hsl(216, 60%, 45%); }
+  50%      { color: hsl(252, 65%, 50%); }
+  75%      { color: hsl(288, 60%, 40%); }
+  100%     { color: black; }
+}
+
+
+/*3 Colonne gauche*/
+aside h2
+{
+  background-color:#424242;
+  text-align: center;
+  color: #ffffbb;
+  margin: 0 -45px 19px -65px;
+}
+aside
+{
+  margin:25px 10px 25px 10px;
+  text-align: left;
+}
+.fa-dog, .fa-cat
+{
+  color: #DAA520;
+  font-size: 25px; 
+  border-radius: 100%;
+  border: 3px solid  #33cb1b ;
+  width: 45px;
+  height: 45px;
+  padding-top:5px;
+}
+.fa-walking, .fa-tree
+{
+  color:green;
+  font-size:45px;
+  width: 55px;
+  height: 55px;
+  padding-top: 5px;
+}  
+.cadreforet
+{
+  border: 3px solid green;
+  text-align: center;
+  margin: 0 25px 0 25px;
+  width: auto;
+}
+.animaux
+{
+  text-align:center;
+  
+}
+.fa-mobile-alt
+{
+  font-size:45px;
+}
+/*4 Colonne droite*/
+/*création de puces personnalisés*/
+ul
+{
+  list-style-image: url(images/puce_etoile-ConvertImage4.png);
+  margin-left: 5px;
+}
+ol
+{
+  list-style-image: url(images/puce_etoile2-ConvertImage.png);
+  margin-left: 5px;
+}
+.fa-university, .fa-business-time, .fa-edit
+{
+  font-size:45px;
+}
+section
+{
+  margin: 35px 15px 015px 35px;  
+}
+hr:after 
+{
+  background:#ffffbb;
+  font-size: 5px;
+}
+
+dt
+{
+ font-size: 18px;
+}
+/*5 Responsive Media queries*/
+/*adaptation pour les changements de taille entre deux valeurs*/
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 320px) and (max-width: 767.98px)
+ {
+  header
+{
+  margin: 10px 10px 0 10px;
+  width:100%;
+  height: 300px;
+}
+  .img-responsive
+  {
+    display: block;
+    height: auto;
+    border-radius: 50%;
+    max-width: 100%;
+  } 
+  .col_left 
+  {
+     width: 100%;
+  }
+  
+  button{
+    font-size: 14PX ;
+    border-radius: 22px;
+    color:white;
+    margin:10px;
+    min-width: 140px;
+    max-width: 80%;
+    height: 45PX;
+    font-family:'Roboto-Bold', sans-serif;
+    }
+
+#btn1{
+    background: linear-gradient(170deg, yellow, orange);
+    opacity:1;
+        &:hover{
+        opacity:0.4;
+        box-shadow: 2px 2px black;
+        }
+      }
+#btn2{
+  background: linear-gradient(170deg, green, blue);
+  opacity:1;
+      &:hover{
+      opacity:0.5;
+      box-shadow: 2px 2px black;
+      }   
+    }            
+    .animation{
+      width: 100%;
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+      animation: slideHigher 25s infinite ;
+      margin-left: 10px;
+    }
+    h1,h5{
+      animation: wheelHueColor 50s infinite ;
+    } 
+    
+ #btn3{
+  background: linear-gradient(170deg,blue,violet );
+  opacity:1;
+      &:hover{
+      opacity:0.5;
+      box-shadow: 2px 2px black;
+      }   
+    }
+
+ }
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px)and (max-width: 991.98px) 
+{ 
+  header
+{
+  margin: 10px 10px 0 10px;
+  width:100%;
+  height: 300px;
+}
+  .img-responsive
+  {
+    display: block;
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+    border-radius: 50%;
+    border :3px black solid;
+   
+   }
+   
+  .col_left
+  {
+      width: 140px;
+  }
+  .animation{
+    width: 100%; /* Ajustez la largeur selon vos besoins */
+    height: 150px; /* Ajustez la hauteur selon vos besoins */
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+    margin-top: 65px;
+    animation : slideHigher 25s infinite;
+    }
+  
+  h1,h5{
+    animation: wheelHueColor 50s infinite ;
+  } 
+  button{
+    font-size: 14PX ;
+    border-radius: 22px;
+    color:white;
+    margin:10px;
+    min-width: 200px;
+    max-width: 80%;
+    height: 45PX;
+    font-family:'Roboto-Bold', sans-serif;
+    }
+
+#btn1{
+    background: linear-gradient(170deg, yellow, orange);
+    opacity:1;
+        &:hover{
+        opacity:0.6;
+        box-shadow: 2px 2px black;
+        }
+}
+#btn2{
+  background: linear-gradient(170deg, green, blue);
+  opacity:1;
+      &:hover{
+      opacity:0.5;
+      box-shadow: 2px 2px black;
+      }   
+ }
+ #btn3{
+  background: linear-gradient(170deg,blue,violet );
+  opacity:1;
+      &:hover{
+      opacity:0.5;
+      box-shadow: 2px 2px black;
+      }   
+  }
+  h2{
+    width: 240px;
+    
+  }
+}
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px)
+{ 
+  header
+{
+  margin: 10px 10px 0 10px;
+  width:100%;
+  height: 300px;
+}
+  .img-responsive
+  {
+    display: block;
+    width: 250px;
+    height:250px;
+    border-radius: 50%;
+    margin:30px 15px 20px 15px;
+    border :3px black solid;
+    max-width: 100%;
+    background-color: white;
+  }
+  .col_left
+  {
+    background-color:#92ccf6;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+  }
+  .animation{
+    width: 100%; /* Ajustez la largeur selon vos besoins */
+    height: 200px; /* Ajustez la hauteur selon vos besoins */
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+    margin-top: 65px;
+    margin-left:55px;
+    animation : slideHigher 25s infinite ;
+    }
+  h1,h5{
+    animation: wheelHueColor 50s infinite ;
+  } 
+  button{
+    font-size: 14PX ;
+    border-radius: 22px;
+    color:white;
+    margin:10px;
+    min-width: 500px;
+    max-width: 80%;
+    height: 45PX;
+    font-family:'Roboto-Bold', sans-serif;
+    }
+
+#btn1{
+    background: linear-gradient(170deg, yellow, orange);
+    opacity:1;
+        &:hover{
+        opacity:0.6;
+        box-shadow: 2px 2px black;
+        }
+}
+#btn2{
+  background: linear-gradient(170deg, green, blue);
+  opacity:1;
+      &:hover{
+      opacity:0.5;
+      box-shadow: 2px 2px black;
+      }  
+    }
+#btn3{
+  background: linear-gradient(170deg,blue,violet );
+  opacity:1;
+      &:hover{
+      opacity:0.5;
+      box-shadow: 2px 2px black;
+      }   
+      }     
+    }
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px)
+{ 
+  header
+{
+  margin: 10px 10px 0 10px;
+  width:100%;
+  height: 300px;
+}
+  .img-responsive
+  {
+    display: block;
+    height: 250px;  
+    border-radius: 50%;
+    width: 250px;
+    margin:40px 10px 20px 40px;
+    border :3px black solid;
+    max-width: 100%;
+    background-color: white;
+  }
+  .col_left
+  {
+    background-color:#92ccf6;
+    min-width: 350px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+  }
+  .animation{
+    width: 100%; /* Ajustez la largeur selon vos besoins */
+    height: 200px; /* Ajustez la hauteur selon vos besoins */
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+    margin-top: 65px;
+    margin-left:105px;
+    animation : slideHigher 25s infinite;
+    }
+  h1,h5{
+    animation: wheelHueColor 50s infinite ;
+  } 
+  button{
+    font-size: 14PX ;
+    border-radius: 22px;
+    color:white;
+    margin:10px;
+    min-width: 500px;
+    max-width: 80%;
+    height: 45PX;
+    font-family:'Roboto-Bold', sans-serif;
+    }
+
+#btn1{
+    background: linear-gradient(170deg, yellow, orange);
+    opacity:1;
+        &:hover{
+        opacity:0.6;
+        box-shadow: 2px 2px black;
+        }
+}
+#btn2{
+  background: linear-gradient(170deg, green, blue);
+  opacity:1;
+      &:hover{
+      opacity:0.5;
+      box-shadow: 2px 2px black;
+      } 
+     }
+#btn3{
+  background: linear-gradient(170deg,blue,violet );
+  opacity:1;
+      &:hover{
+      opacity:0.5;
+      box-shadow: 2px 2px black;
+      }   
+    }   
+    }
